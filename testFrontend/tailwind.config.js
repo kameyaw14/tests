@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        'primary':'#ace0ff'
+        'primary':'#ffa124',
+        'netflixRed': '#E50914',
       },
       fontFamily: {
         poppins: ['"Poppins"', 'sans-serif'],
