@@ -1,0 +1,97 @@
+.footer {
+  margin: 50px 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: black;
+}
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+}
+.ftlText {
+  font-size: 20px;
+  max-width: 400px;
+}
+.footerTopRight {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.footerEmailInput {
+  display: flex;
+  gap: 30px;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background-color: rgb(61, 60, 60);
+  padding-right: 80px;
+  color: white;
+}
+.footerEmailInput:hover {
+  border: 2px solid yellow;
+}
+.footerEmail {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+}
+.footerSubscribe {
+  font-size: 20px;
+  padding: 22px 50px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, rgb(43, 0, 255) 10%, purple 90%);
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+.footerSubscribe:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.footerBLeft {
+  display: flex;
+  gap: 8px;
+}
+.footerBRight {
+  display: flex;
+  gap: 50px;
+}
+
+
+@media (max-width: 1401px) {
+  .footer{
+    margin: 50px 70px;
+  }
+  .footerTop{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footerBottom{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerTopRight{
+    flex-direction: column;
+  }
+  .footerSubscribe {
+    font-size: 13px;
+    padding: 12px 30px;
+  
+  }
+  .footerBottom{
+    font-size: 12px;
+  }
+  .footerBLeft{
+    margin-top: 50px;
+  }
+}
