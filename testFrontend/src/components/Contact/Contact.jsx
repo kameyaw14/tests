@@ -69,10 +69,9 @@ const Contact = () => {
       <div className="contactSections">
         {/* Left Section */}
         <div className="left">
-          <h1 className="leftH1">Let’s talk</h1>
+          <h1 className="leftH1">Let’s Connect</h1>
           <p className="leftP">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            facilis!
+            Have a question or want to collaborate? Feel free to reach out!
           </p>
           <div className="contactDetails">
             <div className="contDet">

@@ -23,16 +23,22 @@ const About = () => {
 
         <div className="aboutRight">
           <div className="aboutPara">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-              quis expedita odit maxime corporis ratione libero itaque nostrum
-              explicabo pariatur optio impedit sunt recusand
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-              quis expedita odit maxime corporis ratione libero itaque nostrum
-              explicabo pariatur{" "}
-            </p>
+            <div className="aboutPara">
+              <p>
+                I'm a dedicated Full Stack Developer and Computer Science major
+                at Kwame Nkrumah University of Science and Technology (KNUST),
+                blending academic knowledge with hands-on experience to create
+                impactful digital solutions.
+              </p>
+              <p>
+                Currently, I work at the KsTU ICT Directorate, where I
+                contribute to maintaining and improving IT systems while gaining
+                practical insights into the tech industry. With a strong
+                foundation in HTML, CSS, JavaScript,React,MongoDb and Node.js. I
+                am driven to build web applications that solve real-world
+                problems and deliver seamless user experiences.
+              </p>
+            </div>
           </div>
 
           <div className="aboutSkills">

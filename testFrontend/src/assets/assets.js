@@ -7,6 +7,7 @@ import arrow_icon from "./images/arrow_icon.svg";
 import me2 from "./images/me2.jpg";
 import me3 from "./images/me3.jpg";
 import nav_underline from "./images/nav_underline.svg";
+import docBooking from "./images/docBooking.png";
 
 const Assets = {
   empireLogo,
@@ -18,6 +19,7 @@ const Assets = {
   me2,
   me3,
   nav_underline,
+  docBooking
 };
 
 export default Assets;

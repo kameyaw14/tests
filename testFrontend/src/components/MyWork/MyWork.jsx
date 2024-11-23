@@ -4,6 +4,7 @@ import Title from "../Title/Title";
 import mywork_data from "../../assets/images/mywork_data";
 import Assets from "../../assets/assets";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const MyWork = () => {
   return (
@@ -14,7 +15,9 @@ const MyWork = () => {
       <div className="myWorkCont">
         {mywork_data.map((item, index) => {
           return (
-            <img src={item.w_img} alt="" key={index} className="myWorkImg" />
+            <Link to={`/projects/${item.w_no}`} key={item.w_no}>
+              <img src={item.w_img} alt={item.w_name} className="myWorkImg" />
+            </Link>
           );
         })}
       </div>

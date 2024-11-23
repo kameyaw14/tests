@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 import Assets from "../../assets/assets";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -11,8 +12,10 @@ const Hero = () => {
         <span className="nameSpan">I'm Chief,</span> a Full Stack Developer
       </h1>
       <p className="heroDesc">
-        Description about me Lorem ipsum dolor sit amet consectetur adipisicing
-        elit.
+        A passionate Full Stack Developer skilled in React, Node.js/Express.js,
+        MongoDb, with a flair for building dynamic web apps . I thrive on
+        creating seamless user experiences and innovative solutions, blending
+        creativity and code to bring ideas to life.
       </p>
       <div className="heroAction">
         <div className="heroConnect">
@@ -20,7 +23,9 @@ const Hero = () => {
             Connect with me
           </AnchorLink>
         </div>
-        <div className="heroResume">My Resume</div>
+        <Link to="/my-resume" className="heroResume">
+          My Resume
+        </Link>
       </div>
     </div>
   );
