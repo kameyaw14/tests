@@ -10,6 +10,10 @@ import docBooking3 from './docBooking3.png'
 import docBooking4 from './docBooking4.png'
 import docBooking5 from './docBooking5.png'
 import docBooking6 from './docBooking6.png'
+import ralphrun from './ralphrun.png'
+import ralphrun2 from './ralphrun2.png'
+import ralphrun3 from './ralphrun3.png'
+import ralphrun4 from './ralphrun4.png'
 
 const mywork_data = [
     {
@@ -25,56 +29,17 @@ const mywork_data = [
         description: "A comprehensive doctor booking site that allows users to book appointments with doctors, view available time slots, and get reminders.",
         tech_stack: "React, Node.js, MongoDB"
     },
+    
     {
         w_no: 2,
-        w_name: "Web Design Project 1",
-        w_img: project2_img,
-        w_img2: project3_img,
-        w_img3: project4_img,
-        w_img4: project5_img,
-        w_img5: project6_img,
-        website_url: "https://web-design-1.com",
-        description: "A modern, responsive website for a client.",
-        tech_stack: "HTML, CSS, JavaScript"
-    },
-    {
-        w_no: 3,
-        w_name: "Web Design Project 2",
-        w_img: project3_img,
-        w_img2: project4_img,
-        w_img3: project5_img,
-        w_img4: project6_img,
-        website_url: "https://web-design-2.com",
-        description: "E-commerce website with a focus on user experience.",
-        tech_stack: "HTML, CSS, React"
-    },
-    {
-        w_no: 4,
-        w_name: "Web Design Project 3",
-        w_img: project4_img,
-        w_img2: project5_img,
-        w_img3: project6_img,
-        website_url: "https://web-design-3.com",
-        description: "Landing page for a product launch.",
-        tech_stack: "HTML, CSS, JavaScript"
-    },
-    {
-        w_no: 5,
-        w_name: "Web Design Project 4",
-        w_img: project5_img,
-        w_img2: project6_img,
-        website_url: "https://web-design-4.com",
-        description: "Responsive design for a portfolio website.",
-        tech_stack: "HTML, CSS, JavaScript"
-    },
-    {
-        w_no: 6,
-        w_name: "Web Design Project 5",
-        w_img: project6_img,
-        w_img2: project2_img,
-        website_url: "https://web-design-5.com",
-        description: "Blog website with integrated CMS.",
-        tech_stack: "WordPress, CSS"
+        w_name: "Inferno Escape",
+        w_img: ralphrun,
+        w_img2: ralphrun2,
+        w_img3: ralphrun3,
+        w_img4: ralphrun4,
+        website_url: "https://kameyaw14.itch.io/run-ralph",
+        description: "A 2D endless runner game.",
+        tech_stack: "Unity,C#,Stick Nodes Pro Animator"
     }
 ];
 

@@ -67,12 +67,12 @@ const About = () => {
       </div>
       <div className="aboutAchievements">
         <div className="aboutAchieve">
-          <h1 className="achieveText1">40+</h1>
+          <h1 className="achieveText1">10+</h1>
           <p className="achieveText2">Projects Completed</p>
         </div>
         <hr className="achieveLine" />
         <div className="aboutAchieve">
-          <h1 className="achieveText1">15+</h1>
+          <h1 className="achieveText1">6+</h1>
           <p className="achieveText2">Happy Clients</p>
         </div>
         <hr className="achieveLine" />

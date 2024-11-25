@@ -32,26 +32,34 @@ const Project = () => {
           alt={`${project.w_name} img2`}
           className="rounded-lg shadow-lg"
         />
-        <img
-          src={project.w_img3}
-          alt={`${project.w_name} img3`}
-          className="rounded-lg shadow-lg"
-        />
-        <img
-          src={project.w_img4}
-          alt={`${project.w_name} img4`}
-          className="rounded-lg shadow-lg"
-        />
-        <img
-          src={project.w_img5}
-          alt={`${project.w_name} img5`}
-          className="rounded-lg shadow-lg"
-        />
-        <img
-          src={project.w_img6}
-          alt={`${project.w_name} img6`}
-          className="rounded-lg shadow-lg"
-        />
+        {project.w_img3 && (
+          <img
+            src={project.w_img3}
+            alt={`${project.w_name} img3`}
+            className="rounded-lg shadow-lg"
+          />
+        )}
+        {project.w_img4 && (
+          <img
+            src={project.w_img4}
+            alt={`${project.w_name} img4`}
+            className="rounded-lg shadow-lg"
+          />
+        )}
+        {project.w_img5 && (
+          <img
+            src={project.w_img5}
+            alt={`${project.w_name} img5`}
+            className="rounded-lg shadow-lg"
+          />
+        )}
+        {project.w_img6 && (
+          <img
+            src={project.w_img6}
+            alt={`${project.w_name} img6`}
+            className="rounded-lg shadow-lg"
+          />
+        )}
       </div>
 
       {/* Project Description and Tech Stack */}
@@ -62,11 +70,11 @@ const Project = () => {
         </p>
       </div>
 
-      {/* View Website Button */}
+      {/* View Website or Play Game Button */}
       <div className="text-center mt-6">
         <a href={project.website_url} target="_blank" rel="noopener noreferrer">
           <button className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
-            View Website
+            {project.w_name === "Inferno Escape" ? "Play Game" : "View Website"}
           </button>
         </a>
       </div>
