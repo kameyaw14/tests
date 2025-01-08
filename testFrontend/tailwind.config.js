@@ -10,6 +10,7 @@ export default {
       },
       fontFamily: {
         poppins: ['"Poppins"', "sans-serif"],
+        courier: ["Courier New", "monospace"],
       },
     },
   },
