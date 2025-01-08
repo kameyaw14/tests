@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const ParticlesBackground = () => {
+const ParticlesBackground = ({ className }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -75,6 +75,7 @@ const ParticlesBackground = () => {
 
   return (
     <canvas
+      className={className}
       ref={canvasRef}
       style={{
         position: "absolute",
@@ -82,7 +83,7 @@ const ParticlesBackground = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: 1, // Keep it behind all other elements
+        // zIndex: 1, // Keep it behind all other elements
       }}
     />
   );

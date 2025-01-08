@@ -4,6 +4,7 @@ import { navLinks } from "../assets/data";
 import { Link } from "react-router-dom";
 
 const ResponsiveMenu = ({ open, setOpen }) => {
+  const zIndex = "z-50";
   return (
     <div>
       <AnimatePresence mode="wait">
@@ -13,7 +14,7 @@ const ResponsiveMenu = ({ open, setOpen }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-0 left-0 w-full h-screen z-30 bg-blue-95000/80 backdrop-blur-lg flex justify-center items-center"
+            className={`${zIndex} absolute top-0 left-0 w-full h-screen z-40 bg-blue-95000/80 backdrop-blur-lg flex justify-center items-center`}
           >
             <div className="w-11/12 max-w-md bg-black text-blue-500 rounded-3xl shadow-xl py-8 px-6">
               <ul className="flex flex-col items-center gap-6">

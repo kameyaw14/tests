@@ -1,4 +1,4 @@
-/* App.css */
+App.css
 body, html {
   margin: 0;
   padding: 0;
@@ -26,5 +26,5 @@ canvas {
   background-color: black;
   color: white;
   padding: 20px;
-  z-index: 1; /* Ensure this content appears above the canvas */
+  /* z-index: 1; Ensure this content appears above the canvas */
 }

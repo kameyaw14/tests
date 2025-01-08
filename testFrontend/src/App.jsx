@@ -10,16 +10,14 @@ function App() {
     <div style={{ position: "relative", overflow: "hidden" }}>
       {/* particles background */}
 
-      <ParticlesBackground />
+      <ParticlesBackground className={"z-10"} />
       {/* navbar */}
       <NavBar />
 
       {/* content */}
 
       {/* routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Routes>{<Route path="/" element={<Home />} />}</Routes>
 
       {/* toast notifications */}
       <ToastContainer />

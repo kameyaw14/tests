@@ -18,19 +18,19 @@ const NavBar = () => {
           {/* Logo Section */}
           <div
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 cursor-pointer font-bold uppercase text-blue-500 custom-glow"
+            className="z-50 flex items-center gap-2 cursor-pointer font-bold uppercase text-blue-500 custom-glow"
           >
             <RiCodeView className="text-5xl filter drop-shadow-lg glow-effect" />
           </div>
 
           {/* Menu Section */}
           <div className="hidden lg:block">
-            <ul className="flex items-center space-x-8 text-blue-500 font-medium">
+            <ul className="z-20 flex items-center space-x-8 text-blue-500 font-medium">
               {navLinks.map((item, index) => (
-                <li key={index} className="relative group">
+                <li key={index} className="relative group z-50">
                   <Link
                     to={item.to}
-                    className="inline-block px-4 py-2 transition-all duration-300 rounded-md"
+                    className=" inline-block px-4 py-2 transition-all duration-300 rounded-md"
                     onClick={() => setMenu(item.label)}
                   >
                     {item.label}
