@@ -12,9 +12,9 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-black shadow-md custom-glow">
+    <div className="bg-transparent shadow-md custom-glow fixed top-0 left-0 right-0 z-50">
       <nav className="w-full">
-        <div className=" mx-auto flex justify-between items-center py-6 px-4 lg:px-10">
+        <div className="mx-auto flex justify-between items-center py-6 px-4 lg:px-10">
           {/* Logo Section */}
           <div
             onClick={() => navigate("/")}
@@ -30,7 +30,7 @@ const NavBar = () => {
                 <li key={index} className="relative group z-50">
                   <Link
                     to={item.to}
-                    className=" inline-block px-4 py-2 transition-all duration-300 rounded-md"
+                    className="inline-block px-4 py-2 transition-all duration-300 rounded-md"
                     onClick={() => setMenu(item.label)}
                   >
                     {item.label}
@@ -48,7 +48,7 @@ const NavBar = () => {
             className="lg:hidden text-gray-700 cursor-pointer z-50"
           >
             {open ? (
-              <AiOutlineClose className="text-3xl  text-blue-500 glow-effect" />
+              <AiOutlineClose className="text-3xl text-blue-500 glow-effect" />
             ) : (
               <GiHamburgerMenu className="text-3xl text-blue-500 glow-effect" />
             )}

@@ -4,7 +4,7 @@ import { navLinks } from "../assets/data";
 import { Link } from "react-router-dom";
 
 const ResponsiveMenu = ({ open, setOpen }) => {
-  const zIndex = "z-50";
+  const zIndex = "z-40";
   return (
     <div>
       <AnimatePresence mode="wait">
