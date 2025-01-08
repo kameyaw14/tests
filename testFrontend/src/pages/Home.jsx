@@ -12,8 +12,8 @@ const Home = () => {
     <section className=" bg-black flex flex-col items-center justify-center min-h-screen">
       <div className=" md:text-left text-center">
         <h1 className="text-3xl md:text-5xl font-courier">
-          <Typewriter text="Hello, I'm Chief" speed={0.13} />
-          <Typewriter text="Full Stack Developer" speed={0.15} />
+          <Typewriter text="Hello, I'm Chief" speed={0.13 * 0.2} />
+          <Typewriter text="Full Stack Developer" speed={0.15 * 0.2} />
         </h1>
 
         {/* CTA */}

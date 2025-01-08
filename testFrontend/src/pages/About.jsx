@@ -1,31 +1,52 @@
 import React from "react";
 import Assets from "../assets/assets";
+import { motion } from "framer-motion";
+import { SlideLeft, SlideRight } from "../utils/animation";
+import Typewriter from "../utils/TypingAnimation";
 
 const AboutMe = () => {
   const zIndex = "z-20";
   return (
     <section className="bg-black text-white min-h-screen flex items-center justify-center py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12 mt-12">
+        <motion.div
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="text-center mb-12 mt-12"
+        >
           <h2 className="text-4xl font-bold text-blue-500 mb-4">About Me</h2>
           <p className={`${zIndex}text-lg font-mono text-gray-300`}>
-            Hi, I'm Chief, a full-stack web developer with a passion for coding,
-            problem-solving, and creating innovative solutions.
+            <Typewriter
+              text=" Hi, I'm Chief, a full-stack web developer with a passion for coding,
+            problem-solving, and creating innovative solutions."
+              speed={0.1 * 0.2}
+            />
           </p>
-        </div>
+        </motion.div>
 
         {/* Profile Image */}
-        <div className="flex justify-center mb-12">
+        <motion.div
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="flex justify-center mb-12"
+        >
           <img
             src={Assets.heroChief2}
             URL
             alt="Profile"
             className={`${zIndex} w-40 h-40 rounded-full border-4 border-blue-500 shadow-lg transition-transform duration-300 hover:scale-110`}
           />
-        </div>
+        </motion.div>
 
         {/* Responsive Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <motion.div
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="grid grid-cols-1 md:grid-cols-2 gap-16"
+        >
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-blue-400">Who Am I?</h3>
             <p className="mt-4 text-lg text-gray-400">
@@ -57,7 +78,7 @@ const AboutMe = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
 
         {/* <div className="mt-12 text-center">
           <h3 className="text-2xl font-semibold text-green-400">Contact</h3>
