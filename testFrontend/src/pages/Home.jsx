@@ -2,6 +2,8 @@ import React from "react";
 import { useAppStore } from "../store/AppStore";
 import Typewriter from "../utils/TypingAnimation";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { SlideLeft, SlideRight } from "../utils/animation";
 
 const Home = () => {
   const zIndex = "z-20";
@@ -15,7 +17,12 @@ const Home = () => {
         </h1>
 
         {/* CTA */}
-        <div className="flex space-x-4 mt-8">
+        <motion.div
+          variants={SlideLeft(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          className="flex space-x-4 mt-8"
+        >
           <Link
             href="#contact"
             offset={80}
@@ -29,7 +36,7 @@ const Home = () => {
           >
             My Resume
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
