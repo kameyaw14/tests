@@ -12,28 +12,31 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-black shadow-md">
+    <div className="bg-black shadow-md custom-glow">
       <nav className="w-full">
         <div className=" mx-auto flex justify-between items-center py-6 px-4 lg:px-10">
           {/* Logo Section */}
           <div
             onClick={() => navigate("/")}
-            className=" flex items-center gap-2 cursor-pointer font-bold uppercase text-blue-500"
+            className="flex items-center gap-2 cursor-pointer font-bold uppercase text-blue-500 custom-glow"
           >
-            <RiCodeView className="text-5xl" />
+            <RiCodeView className="text-5xl filter drop-shadow-lg glow-effect" />
           </div>
+
           {/* Menu Section */}
           <div className="hidden lg:block">
-            <ul className="flex items-center space-x-8 text-white font-medium">
+            <ul className="flex items-center space-x-8 text-blue-500 font-medium">
               {navLinks.map((item, index) => (
-                <li key={index}>
+                <li key={index} className="relative group">
                   <Link
                     to={item.to}
-                    className="inline-block px-4 py-2 hover:bg-blue-500  transition-all duration-300 rounded-md"
+                    className="inline-block px-4 py-2 transition-all duration-300 rounded-md"
                     onClick={() => setMenu(item.label)}
                   >
                     {item.label}
                   </Link>
+                  {/* Pseudo-element replacement */}
+                  <span className="absolute left-0 bottom-0 h-[3px] w-0 bg-transparent transition-all duration-500 ease-in-out group-hover:w-full group-hover:bg-blue-500 glow-effect"></span>
                 </li>
               ))}
             </ul>
@@ -45,9 +48,9 @@ const NavBar = () => {
             className="lg:hidden text-gray-700 cursor-pointer z-50"
           >
             {open ? (
-              <AiOutlineClose className="text-3xl text-white" />
+              <AiOutlineClose className="text-3xl  text-blue-500 glow-effect" />
             ) : (
-              <GiHamburgerMenu className="text-3xl" />
+              <GiHamburgerMenu className="text-3xl text-blue-500 glow-effect" />
             )}
           </div>
         </div>
