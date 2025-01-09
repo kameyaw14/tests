@@ -1,48 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
 import mywork_data from "../assets/images/mywork_data";
+import { motion } from "framer-motion";
+import { SlideLeft } from "../utils/animation";
+import Typewriter from "../utils/TypingAnimation";
 
 const Portfolio = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Project One",
-      description: "A modern web app built with React and Tailwind CSS.",
-      image: "https://via.placeholder.com/300", // Replace with your project image URL
-      demoLink: "https://example.com/demo1",
-      repoLink: "https://github.com/your-repo/project-one",
-    },
-    {
-      id: 2,
-      title: "Project Two",
-      description: "A REST API built with Node.js and MongoDB.",
-      image: "https://via.placeholder.com/300", // Replace with your project image URL
-      demoLink: "https://example.com/demo2",
-      repoLink: "https://github.com/your-repo/project-two",
-    },
-    {
-      id: 3,
-      title: "Project Three",
-      description:
-        "A dynamic portfolio website designed with HTML, CSS, and JavaScript.",
-      image: "https://via.placeholder.com/300", // Replace with your project image URL
-      demoLink: "https://example.com/demo3",
-      repoLink: "https://github.com/your-repo/project-three",
-    },
-  ];
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const categories = ["All", "Full Stack", "Game", "Frontend"];
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? mywork_data
+      : mywork_data.filter((project) =>
+          project.category.includes(activeCategory)
+        );
 
   return (
     <section className="bg-black text-white py-20 px-6 min-h-screen">
       <div className="mt-20 max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        {/* Heading */}
+        <motion.div
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="text-center mb-12"
+        >
           <h2 className="text-4xl font-bold text-blue-500 mb-4">Portfolio</h2>
-          <p className="text-lg text-gray-300">
-            Explore some of my projects showcasing my skills and experience.
+          <p className="text-lg text-gray-300 font-courier">
+            <Typewriter
+              text="Explore some of my projects showcasing my skills and experience."
+              speed={0.1 * 0.5}
+            />
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {mywork_data.map((project) => (
-            <div
+        {/* Category Filters */}
+        <motion.div
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className=" flex justify-center gap-4 mb-8"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`z-20 px-4 py-2 rounded-lg font-semibold ${
+                activeCategory === category
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-700 text-gray-300 hover:bg-blue-400 hover:text-white"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Project Grid */}
+        <motion.div
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          {[...filteredProjects].reverse().map((project) => (
+            <motion.div
               key={project.w_no}
               className="z-20 bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
             >
@@ -75,9 +98,9 @@ const Portfolio = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

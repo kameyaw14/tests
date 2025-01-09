@@ -24,7 +24,7 @@ const Home = () => {
           className="flex space-x-4 mt-8"
         >
           <Link
-            href="#contact"
+            to={"portfolio"}
             offset={80}
             className={`${zIndex}  text-white bg-blue-500 py-2 px-6 text-xl font-bold hover:bg-white hover:text-black transition-all duration-300 cursor-pointer`}
           >
