@@ -8,6 +8,7 @@ import me2 from "./images/me2.jpg";
 import me3 from "./images/me3.jpg";
 import nav_underline from "./images/nav_underline.svg";
 import docBooking from "./images/docBooking.png";
+import resume from "./resume.pdf";
 
 const Assets = {
   empireLogo,
@@ -20,6 +21,7 @@ const Assets = {
   me3,
   nav_underline,
   docBooking,
+  resume,
 };
 
 export const MySkills = [
