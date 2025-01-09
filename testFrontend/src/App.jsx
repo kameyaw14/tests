@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import ParticlesBackground from "./utils/ParticlesBackground";
 import AboutMe from "./pages/About";
 import Skills from "./pages/Skills";
+import Resume from "./pages/Resume";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
 
       {/* toast notifications */}
