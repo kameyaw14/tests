@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import NavBar from "./components/NavBar";
 import ParticlesBackground from "./utils/ParticlesBackground";
 import AboutMe from "./pages/About";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
 
       {/* toast notifications */}

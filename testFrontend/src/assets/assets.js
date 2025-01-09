@@ -19,7 +19,19 @@ const Assets = {
   me2,
   me3,
   nav_underline,
-  docBooking
+  docBooking,
 };
+
+export const MySkills = [
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+  "Django",
+];
 
 export default Assets;
