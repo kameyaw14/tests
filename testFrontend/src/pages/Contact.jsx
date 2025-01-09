@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import { Oval } from "react-loader-spinner"; // Import the loader spinner
+import { Oval } from "react-loader-spinner";
+import NavButtons from "../components/NavigationBTNs";
+import { motion } from "framer-motion";
+import { SlideLeft } from "../utils/animation";
 
 const ContactPage = () => {
   const [result, setResult] = useState("");
-  const [loading, setLoading] = useState(false); // State to manage the loader
+  const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState("contact");
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -42,18 +46,39 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-black text-gray-300 py-10 px-4 flex justify-center items-center">
-      <div className="mt-20 max-w-4xl w-full bg-gray-800 rounded-lg shadow-lg p-8">
-        <h1 className="text-4xl font-semibold text-blue-400 mb-6 text-center">
+      <motion.div
+        variants={SlideLeft(0)}
+        initial="hidden"
+        whileInView="visible"
+        className="mt-20 max-w-4xl w-full bg-gray-800 rounded-lg shadow-lg p-8"
+      >
+        <motion.h1
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="text-4xl font-semibold text-blue-400 mb-6 text-center"
+        >
           Contact Me
-        </h1>
-        <p className="text-center mb-10">
+        </motion.h1>
+        <motion.p
+          variants={SlideLeft(0)}
+          initial="hidden"
+          whileInView="visible"
+          className="text-center mb-10"
+        >
           Have a project in mind or just want to say hello? Fill out the form
           below or reach out via the contact details provided.
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <form onSubmit={onSubmit} className="z-20 space-y-6">
+          <motion.form
+            variants={SlideLeft(0)}
+            initial="hidden"
+            whileInView="visible"
+            onSubmit={onSubmit}
+            className="z-20 space-y-6"
+          >
             <div>
               <label
                 htmlFor="name"
@@ -123,10 +148,15 @@ const ContactPage = () => {
                 "Send Message"
               )}
             </button>
-          </form>
+          </motion.form>
 
           {/* Contact Details */}
-          <div className="z-20 space-y-4">
+          <motion.div
+            variants={SlideLeft(0)}
+            initial="hidden"
+            whileInView="visible"
+            className="z-20 space-y-4"
+          >
             <div className="flex items-center">
               <span className="text-blue-400 text-xl">
                 <i className="fas fa-phone-alt"></i>
@@ -151,11 +181,15 @@ const ContactPage = () => {
               </span>
               <p className="ml-4">www.example.com</p>
             </div>
-          </div>
+          </motion.div>
         </div>
         {result && (
           <p className="text-center mt-6 text-sm text-gray-400">{result}</p>
         )}
+      </motion.div>
+      {/* NavButtons */}
+      <div className="">
+        <NavButtons leftTo={"/portfolio"} page={page} />
       </div>
     </div>
   );

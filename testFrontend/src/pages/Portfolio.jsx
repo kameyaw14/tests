@@ -3,6 +3,7 @@ import mywork_data from "../assets/images/mywork_data";
 import { motion } from "framer-motion";
 import { SlideLeft } from "../utils/animation";
 import Typewriter from "../utils/TypingAnimation";
+import NavButtons from "../components/NavigationBTNs";
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -101,6 +102,10 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+      {/* NavButtons */}
+      <div className="">
+        <NavButtons leftTo={"/resume"} rightTo={"/contact"} />
       </div>
     </section>
   );

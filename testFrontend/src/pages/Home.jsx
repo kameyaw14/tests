@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAppStore } from "../store/AppStore";
 import Typewriter from "../utils/TypingAnimation";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SlideLeft, SlideRight } from "../utils/animation";
+import NavButtons from "../components/NavigationBTNs";
 
 const Home = () => {
   const zIndex = "z-20";
+  const [page, setPage] = useState("home");
 
   return (
     <section className=" bg-black flex flex-col items-center justify-center min-h-screen">
@@ -37,6 +39,10 @@ const Home = () => {
             My Resume
           </Link>
         </motion.div>
+      </div>
+      {/* NavButtons */}
+      <div className="">
+        <NavButtons page={page} rightTo={"/about"} />
       </div>
     </section>
   );

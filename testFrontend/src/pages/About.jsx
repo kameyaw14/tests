@@ -3,6 +3,7 @@ import Assets from "../assets/assets";
 import { motion } from "framer-motion";
 import { SlideLeft, SlideRight } from "../utils/animation";
 import Typewriter from "../utils/TypingAnimation";
+import NavButtons from "../components/NavigationBTNs";
 
 const AboutMe = () => {
   const zIndex = "z-20";
@@ -93,6 +94,10 @@ const AboutMe = () => {
             Send Me An Email
           </a>
         </div> */}
+      </div>
+      {/* NavButtons */}
+      <div className="">
+        <NavButtons leftTo={"/"} rightTo={"/skills"} />
       </div>
     </section>
   );

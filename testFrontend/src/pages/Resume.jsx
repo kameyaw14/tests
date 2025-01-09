@@ -3,6 +3,7 @@ import Assets from "../assets/assets";
 import { motion } from "framer-motion";
 import { SlideLeft, SlideRight } from "../utils/animation";
 import Typewriter from "../utils/TypingAnimation";
+import NavButtons from "../components/NavigationBTNs";
 
 const Resume = () => {
   const zIndex = "z-20";
@@ -71,6 +72,10 @@ const Resume = () => {
             Download My Resume
           </motion.a>
         </motion.div>
+      </div>
+      {/* NavButtons */}
+      <div className="">
+        <NavButtons leftTo={"/skills"} rightTo={"/portfolio"} />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SlideLeft, SlideRight } from "../utils/animation";
 import Typewriter from "../utils/TypingAnimation";
 import { MySkills } from "../assets/assets";
+import NavButtons from "../components/NavigationBTNs";
 
 const Skills = () => {
   const zIndex = "z-20";
@@ -42,6 +43,10 @@ const Skills = () => {
           ))}
         </div>
       </motion.div>
+      {/* NavButtons */}
+      <div className="">
+        <NavButtons leftTo={"/about"} rightTo={"/resume"} />
+      </div>
     </section>
   );
 };
