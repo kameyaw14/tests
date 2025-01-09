@@ -7,6 +7,7 @@ import ParticlesBackground from "./utils/ParticlesBackground";
 import AboutMe from "./pages/About";
 import Skills from "./pages/Skills";
 import Resume from "./pages/Resume";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<AboutMe />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
 
       {/* toast notifications */}

@@ -24,7 +24,7 @@ const Skills = () => {
           <p className="text-lg font-mono text-gray-300">
             <Typewriter
               text="These are the tools and technologies I have experience with. "
-              speed={0.1 * 0.2}
+              speed={0.1 * 0.7}
             />
           </p>
         </motion.div>

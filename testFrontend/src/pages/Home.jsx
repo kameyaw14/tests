@@ -31,7 +31,7 @@ const Home = () => {
             My Projects
           </Link>
           <Link
-            to="/my-resume"
+            to="/resume"
             className={`${zIndex} text-white bg-gradient-to-r from-blue-500 to-white py-2 px-6 text-xl font-bold hover:bg-gradient-to-l  transition-all duration-300 cursor-pointer`}
           >
             My Resume
