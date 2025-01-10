@@ -161,25 +161,25 @@ const ContactPage = () => {
               <span className="text-blue-400 text-xl">
                 <i className="fas fa-phone-alt"></i>
               </span>
-              <p className="ml-4">+233 123 456 789</p>
+              <p className="ml-4">+233 200 805 961</p>
             </div>
             <div className="flex items-center">
               <span className="text-blue-400 text-xl">
                 <i className="fas fa-envelope"></i>
               </span>
-              <p className="ml-4">email@example.com</p>
+              <p className="ml-4">kameyaw14@gmail.com</p>
             </div>
             <div className="flex items-center">
               <span className="text-blue-400 text-xl">
                 <i className="fas fa-map-marker-alt"></i>
               </span>
-              <p className="ml-4">Kumasi, Ghana</p>
+              <p className="ml-4">Accra, Ghana</p>
             </div>
             <div className="flex items-center">
               <span className="text-blue-400 text-xl">
                 <i className="fas fa-globe"></i>
               </span>
-              <p className="ml-4">www.example.com</p>
+              {/* <p className="ml-4">www.example.com</p> */}
             </div>
           </motion.div>
         </div>
