@@ -1,9 +1,3 @@
-import project1_img from "./project_1.svg";
-import project2_img from "./project_2.svg";
-import project3_img from "./project_3.svg";
-import project4_img from "./project_4.svg";
-import project5_img from "./project_5.svg";
-import project6_img from "./project_6.svg";
 import docBooking from "./docBooking.png";
 import docBooking2 from "./docBooking2.png";
 import docBooking3 from "./docBooking3.png";
@@ -20,8 +14,7 @@ import flexcargo3 from "./flexcargo3.png";
 import flexcargo4 from "./flexcargo4.png";
 import flexcargo5 from "./flexcargo5.png";
 import tastehub1 from "./tastehub1.png";
-import tastehub2 from "./tastehub2.png";
-import tastehub3 from "./tastehub3.png";
+import keto from "./keto.png";
 
 const mywork_data = [
   {
@@ -81,6 +74,16 @@ const mywork_data = [
     description: "A restaurant landing page",
     tech_stack: "ReactJs,TailwindCSS,NodeJS",
     repoLink: "https://github.com/kameyaw14/Restaurant-Landing-Page",
+  },
+  {
+    w_no: 5,
+    w_name: "Fuel By Keto",
+    w_img: keto,
+    category: ["Full Stack"],
+    website_url: "https://fuelbyketo.com/",
+    description: "A keto diet website",
+    tech_stack: "ReactJs,TailwindCSS,NodeJS,MongoDB,ExpressJS",
+    repoLink: "https://github.com/kameyaw14/Keto-Diet-Landing-Page",
   },
 ];
 
